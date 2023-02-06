@@ -1,0 +1,106 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1fr) 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    /* border: 1px solid black; */
+    height: 90vh;
+    width: 100%;
+}
+.gameBoard {
+    border: 2px solid black;
+    grid-area: 2/2/2/2;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+}
+.square {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vh;
+}
+.playerTracker {
+    display: flex;
+    justify-content: center;
+    grid-column: 2/3;
+    align-items: center;
+    font-size: x-large;
+}
+.restart {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10vh;
+    margin-left: 27vh;
+}
+.footer {
+    position: absolute;
+    bottom: 2%;
+    right: 45%;
+}
+.fa-github {
+    font-size: 24px;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+		animation: rainbow 2.5s linear;
+		animation-iteration-count: infinite;
+  }
+.winner {
+    animation: rainbow 2.5s linear;
+		animation-iteration-count: infinite;
+  }
+  @keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+}
